@@ -1,0 +1,85 @@
+﻿@model List<CodingSolution.Data.Domen.Sectors>
+@using System.Web.UI.WebControls
+@using CodingSolution.Web.Components
+
+<link href="~/Content/jstree/dist/themes/default/style.min.css" rel="stylesheet" />
+<div class="row" ng-controller="myCtrl">
+    <div class="col-md-4 col-lg-offset-2">
+
+        <h4>Please enter your name and pick the Sectors you are currently involved in. </h4>
+        <hr />
+
+
+        <div ng-if="errorMessage" class="alert alert-danger" ng-cloak  >{{ errorMessage }}</div>
+        <div   ng-if="successMessage" class="alert alert-success" ng-cloak >{{ successMessage }}</div>
+
+        <label for="name">Name:</label>
+        <div class="form-group">
+            <input type="text" class="form-control" id="name" name="name" ng-model="Cname" />
+        </div>
+
+        <label>Sectors:</label>
+        <div id="jstree" name="jstree">
+            @(Html.ComponentView(Model).EmptyContent("All").Children(m => m.Childs)
+                                          .HtmlAttributes(new { id = "tree" })
+                                          .ChildrenHtmlAttributes(new { @class = "subItem" })
+                                          .ItemText(m => m.Name)
+                                          .ItemTemplate( @<text>
+                                                            <a>@item.Name</a>
+                                                          </text>))
+        </div>
+
+
+
+        <br />
+        <input type="checkbox" id="checkagree" ng-model="checkagree" name="checkagree">
+        Agree to terms
+        <br />
+        <br />
+        <div class="form-group">
+            <button type="button" class="btn btn-primary" ng-click="SubimtForm()" id="getChecked">Save</button>
+        </div>
+
+
+
+
+    </div>
+    <div class="col-md-4 col-lg-offset-2" ng-init="InitUserSectors()" ng-if="Sectors" >
+        <h3>List of chosen sectors</h3>
+        <hr />
+        <strong>Your name: </strong><label ng-cloak>{{CandName}}</label>
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+
+                    <th>
+                        Sector Name
+                    </th>
+                    <th>
+                        Action
+                    </th>
+
+                </tr>
+            </thead>
+            <tbody  >
+                <tr ng-repeat="sector in Sectors">
+                    <td ng-cloak>
+                        {{sector.SectorName}}
+                    </td>
+                    <td> <a href=""  ng-click="Delete(sector.CandId,sector.SectorId)">Delete</a></td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
+@section scripts
+{
+
+    <script src="~/Content/jstree/dist/jstree.min.js"></script>
+
+   // @*<script src="~/Content/Selector.Component.js"></script>*@
+    <script src="~/Scripts/angular.js"></script>
+    <script src="~/Content/ngModule.js"></script>
+
+}

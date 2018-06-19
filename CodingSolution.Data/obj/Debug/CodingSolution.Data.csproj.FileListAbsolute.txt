@@ -1,0 +1,14 @@
+C:\CoreProjects\CodingSolution\CodingSolution.Data\bin\Debug\CodingSolution.Data.dll.config
+C:\CoreProjects\CodingSolution\CodingSolution.Data\bin\Debug\CodingSolution.Data.dll
+C:\CoreProjects\CodingSolution\CodingSolution.Data\bin\Debug\CodingSolution.Data.pdb
+C:\CoreProjects\CodingSolution\CodingSolution.Data\bin\Debug\EntityFramework.dll
+C:\CoreProjects\CodingSolution\CodingSolution.Data\bin\Debug\EntityFramework.SqlServer.dll
+C:\CoreProjects\CodingSolution\CodingSolution.Data\bin\Debug\EntityFramework.xml
+C:\CoreProjects\CodingSolution\CodingSolution.Data\bin\Debug\EntityFramework.SqlServer.xml
+C:\CoreProjects\CodingSolution\CodingSolution.Data\obj\Debug\CodingSolution.Data.Migrations.InitialModel.resources
+C:\CoreProjects\CodingSolution\CodingSolution.Data\obj\Debug\CodingSolution.Data.csproj.GenerateResource.cache
+C:\CoreProjects\CodingSolution\CodingSolution.Data\obj\Debug\CodingSolution.Data.csproj.CoreCompileInputs.cache
+C:\CoreProjects\CodingSolution\CodingSolution.Data\obj\Debug\CodingSolution.Data.csproj.CopyComplete
+C:\CoreProjects\CodingSolution\CodingSolution.Data\obj\Debug\CodingSolution.Data.dll
+C:\CoreProjects\CodingSolution\CodingSolution.Data\obj\Debug\CodingSolution.Data.pdb
+C:\CoreProjects\CodingSolution\CodingSolution.Data\obj\Debug\CodingSolution.Data.csprojAssemblyReference.cache
